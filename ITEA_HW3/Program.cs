@@ -8,9 +8,16 @@ namespace ITEA_HW3
         {
             double result = A;
 
+            if (B == 0)
+            {
+                result = 1;
+            }
+            else
+            {
             for (double i = 2; i <= B; i++)
             {
                 result *= A;
+            }
             }
 
             return result;
@@ -68,16 +75,18 @@ namespace ITEA_HW3
 
         static int Task6(int number)
         {
-            int a = 0;
+            int a = 1;
             int b = 1;
+            int fictive = 0;
 
             for (int i = 0; i < number; i++)
             {
                 a = a + b;
-                b = a - b;
+                fictive = b;
+                b = a - fictive;
             }
 
-            return a;
+            return fictive;
         }
 
         static int Task7(int number1, int number2)
@@ -129,7 +138,7 @@ namespace ITEA_HW3
                 int currentDigit = number % 10;
                 number /= 10;
 
-                if (currentDigit % 2 != 0)
+                if (currentDigit % 2 == 1)
                 {
                     ++count;
                 }
@@ -140,22 +149,22 @@ namespace ITEA_HW3
 
         static int Task10(int number)
         {
-            int newnumber = 0;
+            int newNumber = 0;
 
             while (number != 0)
             {
                 int currentDigit = number % 10;
                 number /= 10;
-                newnumber *= 10;
-                newnumber += currentDigit;
+                newNumber *= 10;
+                newNumber += currentDigit;
             }
 
-            return newnumber;
+            return newNumber;
         }
 
-        static String Task12(int number1, int number2)
+        static bool Task12(int number1, int number2)
         {
-            string result = "no";
+            bool result = false;
 
             while (number1 != 0)
             {
@@ -170,7 +179,7 @@ namespace ITEA_HW3
 
                     if (currentDigit1 == currentDigit2)
                     {
-                        result = "Yes";
+                        result = true;
                         break;
                     }
                 }
