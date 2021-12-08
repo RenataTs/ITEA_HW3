@@ -14,10 +14,10 @@ namespace ITEA_HW3
             }
             else
             {
-            for (double i = 2; i <= B; i++)
-            {
-                result *= A;
-            }
+                for (double i = 2; i <= B; i++)
+                {
+                    result *= A;
+                }
             }
 
             return result;
