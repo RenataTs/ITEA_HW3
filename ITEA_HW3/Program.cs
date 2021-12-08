@@ -82,7 +82,6 @@ namespace ITEA_HW3
 
         static int Task7(int number1, int number2)
         {
-
             while (number1 != 0 && number2 != 0)
             {
                 if (number1 > number2)
